@@ -1,4 +1,6 @@
+// Carregando o snake com uma variável chamada "canvas".
 let canvas = document.getElementById("snake");
+// Contexto é a reinderização do Canvas que vai trabalhar com um plano 2D.
 let context = canvas.getContext("2d");
 let box = 32;
 let snake = [];
@@ -10,8 +12,8 @@ snake[0] = {
 let direction = "right";
 
 let food = {
-    x:
-    y:
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
 }
 
 function criarBG() {
